@@ -19,7 +19,7 @@ const AdminNav = () => {
         },
         {
             title:'Add Player',
-            linkTo:'/admin_player/add_player'
+            linkTo:'/admin_player/add_players'
         }
     ];
     const style={
