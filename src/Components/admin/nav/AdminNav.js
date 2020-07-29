@@ -42,6 +42,7 @@ const AdminNav = () => {
     const logoutHandler=()=>{
         firebase.auth().signOut().then(()=>{
             console.log("logout successfully")
+
         },(error)=>{
             console.log("Error logging out")
         })
@@ -49,9 +50,11 @@ const AdminNav = () => {
     return (
         <div>
             {renderItem()}
-            <ListItem button style={style} onClick={()=>logoutHandler()}>
-                Log out
-            </ListItem>
+            <Link to={'/'}>
+                <ListItem button style={style} onClick={()=>logoutHandler()}>
+                    Log out
+                </ListItem>
+            </Link>
         </div>
     );
 };

@@ -17,7 +17,7 @@ import NotFound from "./Components/ui/NotFound";
 
 const Routes=(props)=>{
     return(
-        <Layout>
+        <Layout {...props}>
             <Switch>
                 <PrivateRoute {...props} path={"/admin_player/add_players"}  exact component={AddEditPlayer}/>
                 <PrivateRoute {...props} path={"/admin_player/add_players/:id"}  exact component={AddEditPlayer}/>

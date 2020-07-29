@@ -37,6 +37,13 @@ class Header extends Component {
                     <Link to={"/the_matches"}>
                         <Button color={"inherit"}>Matches</Button>
                     </Link>
+                    {!this.props.user ?
+                        <Link to={"/login"}>
+                            <Button color={"inherit"}>Login</Button>
+                        </Link>
+                        : null
+                    }
+
                 </Toolbar>
             </AppBar>
         );
